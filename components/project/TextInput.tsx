@@ -6,7 +6,14 @@ import {
 } from 'react-native-responsive-screen';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-const CustomTextInput = ({placeHolder, iconName, iconColor, password, onChangeText}) => {
+const CustomTextInput = ({
+  placeHolder,
+  iconName,
+  iconColor,
+  iconSize,
+  password,
+  onChangeText = () => {},
+}) => {
   const [isVissible, setIsVissible] = useState(password);
   const [isFocused, setIsFocused] = useState(false);
 
@@ -16,7 +23,7 @@ const CustomTextInput = ({placeHolder, iconName, iconColor, password, onChangeTe
         styles.viewContainer,
         isFocused ? styles.viewContainerFocus : styles.viewContainer,
       ]}>
-      <Icon name={iconName} color={iconColor} size={35} />
+      <Icon name={iconName} color={iconColor} size={iconSize} />
       <TextInput
         secureTextEntry={isVissible}
         style={styles.textInput}
@@ -31,7 +38,7 @@ const CustomTextInput = ({placeHolder, iconName, iconColor, password, onChangeTe
         <Icon
           name={isVissible ? 'visibility' : 'visibility-off'}
           color={iconColor}
-          size={35}
+          size={iconSize}
           onPress={() => setIsVissible(!isVissible)}
         />
       )}
@@ -43,7 +50,7 @@ export default CustomTextInput;
 
 const styles = StyleSheet.create({
   viewContainer: {
-    width: wp(90),
+    width: wp(93),
     height: hp(7),
     backgroundColor: '#ecececb7',
     borderRadius: 5,
@@ -51,15 +58,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    paddingHorizontal: 3,
+    paddingHorizontal: 4,
   },
   viewContainerFocus: {
     borderColor: '#d9d8d8',
     borderWidth: 2,
   },
   textInput: {
-    width: wp(69),
+    width: wp(74),
     height: hp(7),
     fontSize: 20,
   },
 });
+
+// #767373b7'
