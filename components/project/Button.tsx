@@ -18,7 +18,7 @@ export default Button;
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#0d3ef0e9',
+    backgroundColor: '#0065ff',
     color: '#FFFF',
     width: wp(95),
     height: hp(6),
