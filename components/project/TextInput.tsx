@@ -1,9 +1,13 @@
-import {StyleSheet, Text, TextInput, View} from 'react-native';
+import {Dimensions, StyleSheet, Text, TextInput, View} from 'react-native';
 import React, {useState} from 'react';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import {
+  responsiveWidth,
+  responsiveHeight,
+} from 'react-native-responsive-dimensions';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const CustomTextInput = ({
@@ -17,12 +21,15 @@ const CustomTextInput = ({
   const [isVissible, setIsVissible] = useState(password);
   const [isFocused, setIsFocused] = useState(false);
 
+  // const {width_1, height_2} = Dimensions.get("window")
+
   return (
     <View
       style={[
         styles.viewContainer,
         isFocused ? styles.viewContainerFocus : styles.viewContainer,
       ]}>
+        
       <Icon name={iconName} color={iconColor} size={iconSize} />
       <TextInput
         secureTextEntry={isVissible}
@@ -59,13 +66,14 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'center',
     paddingHorizontal: 4,
+    marginVertical:15,
   },
   viewContainerFocus: {
     borderColor: '#d9d8d8',
     borderWidth: 2,
   },
   textInput: {
-    width: wp(74),
+    width: wp(87),
     height: hp(7),
     fontSize: 20,
   },

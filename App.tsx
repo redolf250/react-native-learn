@@ -6,38 +6,14 @@
  */
 
 import React from 'react';
-import {useDeviceOrientation} from '@react-native-community/hooks';
 import {
-  SafeAreaView,
   StyleSheet,
   Alert,
   Platform,
   StatusBar,
-  View,
 } from 'react-native';
-import Hello from './components/Hello';
-import TextField from './components/TextField';
-import Text from './components/Text';
-import Counter from './components/Counter';
-import Scroll from './components/ScrollView';
-import 'react-native-gesture-handler';
-import BottomNavigation from './src/navigations/BottomStackNavigation_';
-import MyAsyncStorage from './components/AsyncStorage_';
 // import Login from './src/screens/Login';
-import Registration from './src/screens/RegistrationScreen';
-import {NavigationContainer} from '@react-navigation/native';
-import HomeScreen from './src/screens/HomeScreen';
-import SettingsScreen from './src/screens/SettingsScreen';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import Loader from './components/Loader';
-import Ratings from './components/Ratings';
-import Elements from './components/Elements';
-import Login from './src/auth/Login';
-import StackNavigation from './src/onboarding/StackNavigation';
-import Lottie from './components/LottieView';
-import BackgroundImage from './src/screens/BackgroundImage';
-import CustomLogin from './src/screens/CustomLogin';
+import MyView from './components/project/MyView';
 // import BottomNavigation from './src/navigations/BottomStackNavigation';
 
 function App(): JSX.Element {
@@ -69,8 +45,13 @@ function App(): JSX.Element {
   // };
 
   return (
+
+    
+        <MyView />
+   
+    
     // <CustomLogin />
-    <BackgroundImage />
+    // <BackgroundImage />
     // <Lottie />
     // <>
     // <SafeAreaView>
@@ -122,6 +103,7 @@ function App(): JSX.Element {
     //   <View style={styles.view2} />
     //   {/* <Button color="orange" title="Click Me" onPress={log} /> */}
     // </SafeAresaView>
+
   );
 }
 
