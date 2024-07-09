@@ -12,6 +12,7 @@ import {
   Platform,
   StatusBar,
 } from 'react-native';
+import ApiRequest from './components/ApiRequest';
 // import Login from './src/screens/Login';
 import MyView from './components/project/MyView';
 // import BottomNavigation from './src/navigations/BottomStackNavigation';
@@ -47,7 +48,9 @@ function App(): JSX.Element {
   return (
 
     
-        <MyView />
+        // <MyView />
+
+        <ApiRequest/>
    
     
     // <CustomLogin />
